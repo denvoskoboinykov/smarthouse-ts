@@ -1,6 +1,4 @@
 export default interface Device {
-  [x: string]: any;
-
   getId(): string;
 
   getState(): boolean;
