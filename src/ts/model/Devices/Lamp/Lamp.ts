@@ -12,67 +12,67 @@ export default class Lamp extends Device {
     this.color = color;
   }
 
-  getBrightness(): number {
+  public getBrightness(): number {
     return this.brightness.getValue();
   }
 
-  getRed(): number {
+  public getRed(): number {
     return this.color.getRed();
   }
 
-  getGreen(): number {
+  public getGreen(): number {
     return this.color.getGreen();
   }
 
-  getBlue(): number {
+  public getBlue(): number {
     return this.color.getBlue();
   }
 
-  setBrightness(value: number): void {
+  public setBrightness(value: number): void {
     this.brightness.setValue(value);
   }
 
-  setRed(value: number): void {
+  public setRed(value: number): void {
     this.color.setRed(value);
   }
 
-  setGreen(value: number): void {
+  public setGreen(value: number): void {
     this.color.setGreen(value);
   }
 
-  setBlue(value: number): void {
+  public setBlue(value: number): void {
     this.color.setBlue(value);
   }
 
-  increaseBrightness(value: number): void {
+  public increaseBrightness(value: number): void {
     this.brightness.increase(value);
   }
 
-  decreaseBrightness(value: number): void {
+  public decreaseBrightness(value: number): void {
     this.brightness.decrease(value);
   }
 
-  increaseRed(value: number): void {
+  public increaseRed(value: number): void {
     this.color.increaseRed(value);
   }
 
-  decreaseRed(value: number): void {
+  public decreaseRed(value: number): void {
     this.color.decreaseRed(value);
   }
 
-  increaseGreen(value: number): void {
+  public increaseGreen(value: number): void {
     this.color.increaseGreen(value);
   }
 
-  decreaseGreen(value: number): void {
+  public decreaseGreen(value: number): void {
     this.color.decreaseGreen(value);
   }
 
-  increaseBlue(value: number): void {
+  public increaseBlue(value: number): void {
     this.color.increaseBlue(value);
   }
 
-  decreaseBlue(value: number): void {
+  public decreaseBlue(value: number): void {
     this.color.decreaseBlue(value);
   }
 }

@@ -12,51 +12,51 @@ export default class Color implements IColor {
     this.blue = blue;
   }
 
-  getRed(): number {
+  public getRed(): number {
     return this.red.getValue();
   }
 
-  getGreen(): number {
+  public getGreen(): number {
     return this.green.getValue();
   }
 
-  getBlue(): number {
+  public getBlue(): number {
     return this.blue.getValue();
   }
 
-  setRed(value: number): void {
+  public setRed(value: number): void {
     this.red.setValue(value);
   }
 
-  setGreen(value: number): void {
+  public setGreen(value: number): void {
     this.green.setValue(value);
   }
 
-  setBlue(value: number): void {
+  public setBlue(value: number): void {
     this.blue.setValue(value);
   }
 
-  increaseRed(value: number): void {
+  public increaseRed(value: number): void {
     this.red.increase(value);
   }
 
-  decreaseRed(value: number): void {
+  public decreaseRed(value: number): void {
     this.red.decrease(value);
   }
 
-  increaseGreen(value: number): void {
+  public increaseGreen(value: number): void {
     this.green.increase(value);
   }
 
-  decreaseGreen(value: number): void {
+  public decreaseGreen(value: number): void {
     this.green.decrease(value);
   }
 
-  increaseBlue(value: number): void {
+  public increaseBlue(value: number): void {
     this.blue.increase(value);
   }
 
-  decreaseBlue(value: number): void {
+  public decreaseBlue(value: number): void {
     this.blue.decrease(value);
   }
 }

@@ -60,22 +60,31 @@ const lampFromHouse: IDevice = house.selectDevice(lampId);
 (lampFromHouse as Lamp).decreaseGreen(-150);
 (lampFromHouse as Lamp).setRed(177);
 
+console.log('before promise');
 console.log(lampFromHouse);
 
-house.delayAction(
-  () => {
-    lampFromHouse.enable();
-  },
-  2000,
-  () => {
-    house.delayAction(
-      () => {
-        lampFromHouse.enable();
-      },
-      2000,
-      () => {
-        console.log(house.selectDevice(lampId));
-      },
-    );
-  },
-);
+house
+  .delayAction(lampId, 2345)
+  .then(device => {
+    device.enable();
+    return device;
+  })
+  .then(console.log);
+
+// house.delayAction(
+//   () => {
+//     lampFromHouse.enable();
+//   },
+//   2000,
+//   () => {
+//     house.delayAction(
+//       () => {
+//         lampFromHouse.enable();
+//       },
+//       2000,
+//       () => {
+//         console.log(house.selectDevice(lampId));
+//       },
+//     );
+//   },
+// );

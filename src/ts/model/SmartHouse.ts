@@ -12,42 +12,54 @@ export default class SmartHouse implements ISmartHouse {
     this.devices = [];
   }
 
-  getId(): string {
+  public getId(): string {
     return this.id;
   }
 
-  getName(): string {
+  public getName(): string {
     return this.name;
   }
 
-  getDevices(): Array<IDevice> {
+  public getDevices(): Array<IDevice> {
     return this.devices;
   }
 
-  selectDevice(id: string): IDevice {
+  public selectDevice(id: string): IDevice {
     return this.devices.find(device => device.getId() === id);
   }
 
-  addDevice(device: IDevice): void {
+  public addDevice(device: IDevice): void {
     this.devices.push(device);
   }
 
-  deleteDevice(id: string): void {
+  public deleteDevice(id: string): void {
     this.devices = this.devices.filter(device => device.getId() !== id);
   }
 
-  enableAllDevuces(): void {
+  public enableAllDevuces(): void {
     this.devices.forEach(device => device.enable());
   }
 
-  disableAllDevices(): void {
+  public disableAllDevices(): void {
     this.devices.forEach(device => device.disable());
   }
 
-  delayAction(action: Function, delay: number, callback: Function): void {
-    setTimeout(() => {
-      action();
-      callback();
-    }, delay);
+  public delayAction(id: string, delay: number): Promise<IDevice> {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(this.selectDevice(id));
+      }, delay);
+    });
   }
+
+  // public delayAction(
+  //   action: Function,
+  //   delay: number,
+  //   callback: Function,
+  // ): void {
+  //   setTimeout(() => {
+  //     action();
+  //     callback();
+  //   }, delay);
+  // }
 }

@@ -11,31 +11,31 @@ export default abstract class Device implements IDevice {
     this.state = false;
   }
 
-  getId(): string {
+  public getId(): string {
     return this.id;
   }
 
-  getState(): boolean {
+  public getState(): boolean {
     return this.state;
   }
 
-  getName(): string {
+  public getName(): string {
     return this.name;
   }
 
-  setName(name: string): void {
+  public setName(name: string): void {
     this.name = name;
   }
 
-  toggleState(): void {
+  public toggleState(): void {
     this.state = !this.state;
   }
 
-  disable(): void {
+  public disable(): void {
     this.state = false;
   }
 
-  enable(): void {
+  public enable(): void {
     this.state = true;
   }
 }

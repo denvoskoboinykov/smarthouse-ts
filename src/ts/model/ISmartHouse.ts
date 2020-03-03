@@ -17,5 +17,5 @@ export default interface ISmartHouse {
 
   disableAllDevices(): void;
 
-  delayAction(action: Function, delay: number, callback: Function): void;
+  delayAction(id: string, delay: number): Promise<IDevice>;
 }

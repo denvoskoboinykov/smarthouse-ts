@@ -22,55 +22,55 @@ export default class Television extends Device {
     this.brightness = brightness;
   }
 
-  getScreenDiagonal(): number {
+  public getScreenDiagonal(): number {
     return this.screenDiagonal;
   }
 
-  getVolume(): number {
+  public getVolume(): number {
     return this.volume.getValue();
   }
 
-  getSaturation(): number {
+  public getSaturation(): number {
     return this.saturation.getValue();
   }
 
-  getBrightness(): number {
+  public getBrightness(): number {
     return this.brightness.getValue();
   }
 
-  setVolume(value: number): void {
+  public setVolume(value: number): void {
     this.volume.setValue(value);
   }
 
-  setSaturation(value: number): void {
+  public setSaturation(value: number): void {
     this.saturation.setValue(value);
   }
 
-  setBrightness(value: number): void {
+  public setBrightness(value: number): void {
     this.brightness.setValue(value);
   }
 
-  increaseVolume(value: number): void {
+  public increaseVolume(value: number): void {
     this.volume.increase(value);
   }
 
-  decreaseVolume(value: number): void {
+  public decreaseVolume(value: number): void {
     this.volume.decrease(value);
   }
 
-  increaseSaturation(value: number): void {
+  public increaseSaturation(value: number): void {
     this.saturation.increase(value);
   }
 
-  decreaseSaturation(value: number): void {
+  public decreaseSaturation(value: number): void {
     this.saturation.decrease(value);
   }
 
-  increaseBrightness(value: number): void {
+  public increaseBrightness(value: number): void {
     this.brightness.increase(value);
   }
 
-  decreaseBrightness(value: number): void {
+  public decreaseBrightness(value: number): void {
     this.brightness.decrease(value);
   }
 }
