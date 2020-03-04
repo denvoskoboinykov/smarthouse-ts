@@ -6,7 +6,7 @@ export default class SmartHouse implements ISmartHouse {
   private name: string;
   private devices: Array<IDevice>;
 
-  constructor(id: string, name: string) {
+  public constructor(id: string, name: string) {
     this.id = id;
     this.name = name;
     this.devices = [];
@@ -51,15 +51,4 @@ export default class SmartHouse implements ISmartHouse {
       }, delay);
     });
   }
-
-  // public delayAction(
-  //   action: Function,
-  //   delay: number,
-  //   callback: Function,
-  // ): void {
-  //   setTimeout(() => {
-  //     action();
-  //     callback();
-  //   }, delay);
-  // }
 }

@@ -7,7 +7,7 @@ export default class Television extends Device {
   private saturation: IRange;
   private brightness: IRange;
 
-  constructor(
+  public constructor(
     id: string,
     name: string,
     screenDiagonal: number,

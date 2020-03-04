@@ -5,7 +5,7 @@ export default class Range implements IRange {
   private max: number;
   private value: number;
 
-  constructor(min: number, max: number, initialValue: number) {
+  public constructor(min: number, max: number, initialValue: number) {
     this.min = min;
     this.max = max;
     this.value = initialValue;

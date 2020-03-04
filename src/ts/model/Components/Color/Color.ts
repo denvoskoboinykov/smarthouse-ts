@@ -6,7 +6,7 @@ export default class Color implements IColor {
   private green: IRange;
   private blue: IRange;
 
-  constructor(red: IRange, green: IRange, blue: IRange) {
+  public constructor(red: IRange, green: IRange, blue: IRange) {
     this.red = red;
     this.green = green;
     this.blue = blue;

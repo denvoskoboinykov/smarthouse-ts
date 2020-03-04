@@ -6,7 +6,12 @@ export default class Lamp extends Device {
   private brightness: IRange;
   private color: IColor;
 
-  constructor(id: string, name: string, brightness: IRange, color: IColor) {
+  public constructor(
+    id: string,
+    name: string,
+    brightness: IRange,
+    color: IColor,
+  ) {
     super(id, name);
     this.brightness = brightness;
     this.color = color;

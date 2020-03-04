@@ -64,27 +64,21 @@ console.log('before promise');
 console.log(lampFromHouse);
 
 house
-  .delayAction(lampId, 2345)
+  .delayAction(lampId, 2000)
   .then(device => {
     device.enable();
     return device;
   })
   .then(console.log);
 
-// house.delayAction(
-//   () => {
-//     lampFromHouse.enable();
-//   },
-//   2000,
-//   () => {
-//     house.delayAction(
-//       () => {
-//         lampFromHouse.enable();
-//       },
-//       2000,
-//       () => {
-//         console.log(house.selectDevice(lampId));
-//       },
-//     );
-//   },
-// );
+const delayDisable = async (id: string, delay: number): Promise<IDevice> => {
+  const device = await house.delayAction(id, delay).then(device => {
+    device.disable();
+    return device;
+  });
+  console.log('device was disabled');
+  console.log(device);
+  return device;
+};
+
+delayDisable(lampId, 4000);

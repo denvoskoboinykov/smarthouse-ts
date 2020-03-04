@@ -5,7 +5,7 @@ export default abstract class Device implements IDevice {
   private name: string;
   private state: boolean;
 
-  constructor(id: string, name: string) {
+  public constructor(id: string, name: string) {
     this.id = id;
     this.name = name;
     this.state = false;
