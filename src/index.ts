@@ -55,6 +55,7 @@ console.log(tvFromHouse);
 //house.devices[1].enable();
 const lampFromHouse: IDevice = house.selectDevice(lampId);
 
+(house.selectDevice(lampId) as Lamp)decreaseBrightness(841250);
 (lampFromHouse as Lamp).decreaseBrightness(841250);
 (lampFromHouse as Lamp).setBlue(500);
 (lampFromHouse as Lamp).decreaseGreen(-150);
